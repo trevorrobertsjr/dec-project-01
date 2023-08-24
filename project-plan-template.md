@@ -1,30 +1,18 @@
 # Project plan 
 
 ## Objective 
-A short statement about the objective of your project.
-
-Example: 
-
-> The objective of our project is to provide analytical datasets from our Orders API and Customers database. 
+The objective of the product is to provide property pricing trends in different areas of the United States.
 
 ## Consumers 
-What users would find your data useful? How do they want to access the data? 
-
-Example: 
-
-> The users of our datasets are Data Analysts and the Production team in the business. 
+There two categories of consumers: home sellers and home buyers. 
 
 ## Questions 
-What questions are you trying to answer with your data? How will your data support your users?
 
-Example: 
-
-> - How many orders are there for each customer? 
-> - What countries and regions have the most orders? 
-> - What customers have their orders delayed? 
-> - How many delayed orders are there for each country and region? 
-> - How many orders do we have for each day? 
-> - How many delayed orders do we have for each day? 
+1. What are pricing trends over X number of years?
+2. Which cities, states, regions are seeing the most price growth?
+3. Which cities, states, regions saw the most price growth during remote work boom in Covid?
+4. What do the pricing trends look like in the same areas with remote work trends reversing?
+5. Aside from Covid years, any other years of strong price growth/contraction?
 
 ## Source datasets 
 What datasets are you sourcing from? How frequently are the source datasets updating?
@@ -33,27 +21,28 @@ Example:
 
 | Source name | Source type | Source documentation |
 | - | - | - |
-| Customers database | PostgreSQL database | - | 
-| Orders API | REST API | - | 
+| Redfin Data Center | TSV | https://www.redfin.com/news/data-center/ | 
 
 ## Solution architecture
-How are we going to get data flowing from source to serving? What components and services will we combine to implement the solution? How do we automate the entire running of the solution? 
+Hypothetical data scraper will take newest values from next month's TSV file
 
-- What data extraction patterns are you going to be using? 
-- What data loading patterns are you going to be using? 
-- What data transformation patterns are you going to be performing? 
+1. (Extract & Load) Ingest the dataset to Postgres with Python to raw table
+2. (Transform) Raw input table perform transformations to create tables containing the query data that is useful for consumers.
+3. Transformation patterns include data organized by year, by city, by state, by region
 
 We recommend using a diagramming tool like [draw.io](https://draw.io/) to create your architecture diagram. 
 
-Here is a sample solution architecture diagram: 
+Here is the solution architecture diagram: 
 
-![images/sample-solution-architecture-diagram.png](images/sample-solution-architecture-diagram.png)
+![images/dec.png](images/dec.png)
 
 ## Breakdown of tasks 
-How is your project broken down? Who is doing what?
+1. Python to ingest data to Postgres
+2. SQL queries for the transformations
+3. Python to run to run SQL queries
+4. Python to run pipeline
+5. Python to log pipeline
+6. Docker image of the Python code
+7. Run container in ECS
 
-We recommend using a free Task board such as [Trello](https://trello.com/). This makes it easy to assign and track tasks to each individual. 
-
-Example: 
-
-![images/kanban-task-board.png](images/kanban-task-board.png)
+Trello board created and will add members pending receiving everyone's e-mail addresses: https://trello.com/b/UaWnmHYO/dec-project-1
