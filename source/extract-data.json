@@ -1,0 +1,1498 @@
+{
+    "status": 200,
+    "data": {
+      "total": 2767,
+      "count": 10,
+      "results": [
+        {
+          "primary_photo": {
+            "href": "https://ap.rdcpix.com/af1c6f47161754c5b4e8955967b82213l-m2685298222s-w1024_h768.jpg"
+          },
+          "last_update_date": "2021-12-29T21:05:36Z",
+          "source": {
+            "plan_id": null,
+            "agents": [
+              {
+                "office_name": null
+              },
+              {
+                "office_name": null
+              }
+            ],
+            "spec_id": null,
+            "type": "mls"
+          },
+          "tags": [
+            "basement",
+            "two_or_more_stories",
+            "fixer_upper"
+          ],
+          "permalink": "17443-Fleming-St_Detroit_MI_48212_M48638-13473",
+          "status": "sold",
+          "list_date": "2021-07-24T00:59:24Z",
+          "open_houses": null,
+          "description": {
+            "year_built": 1927,
+            "baths_3qtr": null,
+            "sold_date": "2021-12-27",
+            "sold_price": 8000,
+            "baths_full": 1,
+            "name": null,
+            "baths_half": 1,
+            "lot_sqft": 3485,
+            "sqft": 1513,
+            "baths": 2,
+            "sub_type": null,
+            "baths_1qtr": null,
+            "garage": null,
+            "stories": 2,
+            "beds": 3,
+            "type": "single_family"
+          },
+          "branding": [
+            {
+              "name": "Serenity Realty Llc",
+              "photo": null,
+              "type": "Office"
+            }
+          ],
+          "list_price": 12000,
+          "lead_attributes": {
+            "show_contact_an_agent": true
+          },
+          "property_id": "4863813473",
+          "photos": [
+            {
+              "tags": [
+                {
+                  "label": "exterior",
+                  "probability": 0.99940395355225
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.99968683719635
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.99511849880219
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.98174071311951
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.99259102344513
+                }
+              ],
+              "href": "https://ap.rdcpix.com/af1c6f47161754c5b4e8955967b82213l-m2685298222s-w1024_h768.jpg"
+            }
+          ],
+          "flags": {
+            "is_new_construction": null,
+            "is_for_rent": null,
+            "is_subdivision": null,
+            "is_contingent": null,
+            "is_price_reduced": null,
+            "is_pending": null,
+            "is_foreclosure": null,
+            "is_plan": null,
+            "is_coming_soon": null,
+            "is_new_listing": false
+          },
+          "community": null,
+          "products": {
+            "brand_name": "basic_opt_in"
+          },
+          "virtual_tours": null,
+          "other_listings": {
+            "rdc": [
+              {
+                "listing_id": "2932214470",
+                "listing_key": null,
+                "status": "sold",
+                "primary": null
+              }
+            ]
+          },
+          "listing_id": "2932214470",
+          "price_reduced_amount": null,
+          "location": {
+            "address": {
+              "postal_code": "48212",
+              "state": "Michigan",
+              "coordinate": {
+                "lon": -83.079633,
+                "lat": 42.421628
+              },
+              "city": "Detroit",
+              "state_code": "MI",
+              "line": "17443 Fleming St"
+            },
+            "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=17443%20Fleming%20St%2C%20Detroit%2C%20MI%2048212&size=640x480&source=outdoor&signature=XzEUMRTgSHIqlNZLbtd7fxl8meY=",
+            "county": {
+              "fips_code": "26163",
+              "name": "Wayne"
+            }
+          },
+          "matterport": false
+        },
+        {
+          "primary_photo": {
+            "href": "https://ap.rdcpix.com/985549c2c35f5f76828e2e821c3bb0a5l-m4063931839s-w1024_h768.jpg"
+          },
+          "last_update_date": "2021-12-21T11:33:44Z",
+          "source": {
+            "plan_id": null,
+            "agents": [
+              {
+                "office_name": "The Charles Reinhart Company"
+              },
+              {
+                "office_name": null
+              }
+            ],
+            "spec_id": null,
+            "type": "mls"
+          },
+          "tags": [
+            "community_outdoor_space",
+            "dishwasher",
+            "fireplace",
+            "hardwood_floors",
+            "view",
+            "washer_dryer",
+            "basement",
+            "garage_1_or_more",
+            "garage_2_or_more",
+            "granite_kitchen",
+            "updated_kitchen",
+            "fenced_yard",
+            "open_floor_plan",
+            "floor_plan",
+            "front_porch",
+            "new_roof"
+          ],
+          "permalink": "4229-Leslie-St_Detroit_MI_48238_M49567-54734",
+          "status": "sold",
+          "list_date": "2021-11-18T22:13:22Z",
+          "open_houses": null,
+          "description": {
+            "year_built": 1923,
+            "baths_3qtr": null,
+            "sold_date": "2021-12-20",
+            "sold_price": 247000,
+            "baths_full": 2,
+            "name": null,
+            "baths_half": 1,
+            "lot_sqft": 5200,
+            "sqft": 2289,
+            "baths": 3,
+            "sub_type": null,
+            "baths_1qtr": null,
+            "garage": 2,
+            "stories": null,
+            "beds": 5,
+            "type": "single_family"
+          },
+          "branding": [
+            {
+              "name": "Reinhart Realtors - East Ann Arbor",
+              "photo": "https://ap.rdcpix.com/1652048770/8336419bf14c0d8b02748bb61f3a1dc5o-c0s.jpg",
+              "type": "Office"
+            }
+          ],
+          "list_price": 247000,
+          "lead_attributes": {
+            "show_contact_an_agent": true
+          },
+          "property_id": "4956754734",
+          "photos": [
+            {
+              "tags": [
+                {
+                  "label": "exterior",
+                  "probability": 0.84292638301849
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.99990582466125
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.9987940788269
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.99139833450317
+                }
+              ],
+              "href": "https://ap.rdcpix.com/985549c2c35f5f76828e2e821c3bb0a5l-m4063931839s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "kitchen",
+                  "probability": 0.9975294470787
+                }
+              ],
+              "href": "https://ap.rdcpix.com/985549c2c35f5f76828e2e821c3bb0a5l-m297828922s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "kitchen",
+                  "probability": 0.99996280670166
+                }
+              ],
+              "href": "https://ap.rdcpix.com/985549c2c35f5f76828e2e821c3bb0a5l-m1976293887s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "dining_room",
+                  "probability": 0.99999332427979
+                }
+              ],
+              "href": "https://ap.rdcpix.com/985549c2c35f5f76828e2e821c3bb0a5l-m3286258102s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "dining_room",
+                  "probability": 0.63209956884384
+                }
+              ],
+              "href": "https://ap.rdcpix.com/985549c2c35f5f76828e2e821c3bb0a5l-m4062786791s-w1024_h768.jpg"
+            }
+          ],
+          "flags": {
+            "is_new_construction": null,
+            "is_for_rent": null,
+            "is_subdivision": null,
+            "is_contingent": null,
+            "is_price_reduced": false,
+            "is_pending": null,
+            "is_foreclosure": null,
+            "is_plan": null,
+            "is_coming_soon": null,
+            "is_new_listing": false
+          },
+          "community": null,
+          "products": {
+            "brand_name": "advantage_pro"
+          },
+          "virtual_tours": [
+            {
+              "type": null,
+              "href": "https://youtu.be/s26L9V4mk04"
+            }
+          ],
+          "other_listings": {
+            "rdc": [
+              {
+                "listing_id": "569272797",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "567910317",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "2936919287",
+                "listing_key": null,
+                "status": "sold",
+                "primary": null
+              },
+              {
+                "listing_id": "595732629",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              }
+            ]
+          },
+          "listing_id": "2936919287",
+          "price_reduced_amount": 28000,
+          "location": {
+            "address": {
+              "postal_code": "48238",
+              "state": "Michigan",
+              "coordinate": {
+                "lon": -83.13328,
+                "lat": 42.383894
+              },
+              "city": "Detroit",
+              "state_code": "MI",
+              "line": "4229 Leslie St"
+            },
+            "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=4229%20Leslie%20St%2C%20Detroit%2C%20MI%2048238&size=640x480&source=outdoor&signature=uQBHuRRjRN_tBu7KjsP8QxzrqL4=",
+            "county": {
+              "fips_code": "26163",
+              "name": "Wayne"
+            }
+          },
+          "matterport": false
+        },
+        {
+          "primary_photo": {
+            "href": "https://ap.rdcpix.com/a877d069582d2c098751c467fec19ac5l-m496968360s-w1024_h768.jpg"
+          },
+          "last_update_date": "2021-12-20T18:07:19Z",
+          "source": {
+            "plan_id": null,
+            "agents": [
+              {
+                "office_name": "Key Realty One"
+              },
+              {
+                "office_name": null
+              }
+            ],
+            "spec_id": null,
+            "type": "mls"
+          },
+          "tags": [
+            "community_outdoor_space",
+            "community_security_features",
+            "dining_room",
+            "dishwasher",
+            "forced_air",
+            "hardwood_floors",
+            "laundry_room",
+            "washer_dryer",
+            "basement",
+            "modern_kitchen",
+            "large_kitchen",
+            "rental_property"
+          ],
+          "permalink": "1743-Van-Dyke-St_Detroit_MI_48214_M31724-96747",
+          "status": "sold",
+          "list_date": "2021-09-04T18:52:20Z",
+          "open_houses": null,
+          "description": {
+            "year_built": 1890,
+            "baths_3qtr": null,
+            "sold_date": "2021-12-20",
+            "sold_price": 360000,
+            "baths_full": 2,
+            "name": null,
+            "baths_half": null,
+            "lot_sqft": 4792,
+            "sqft": 2544,
+            "baths": 2,
+            "sub_type": "condo",
+            "baths_1qtr": null,
+            "garage": null,
+            "stories": null,
+            "beds": 6,
+            "type": "condos"
+          },
+          "branding": [
+            {
+              "name": "Key Realty One",
+              "photo": null,
+              "type": "Office"
+            }
+          ],
+          "list_price": 375000,
+          "lead_attributes": {
+            "show_contact_an_agent": true
+          },
+          "property_id": "3172496747",
+          "photos": [
+            {
+              "tags": [
+                {
+                  "label": "exterior",
+                  "probability": 0.98339372873306
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.99958688020706
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.98152667284012
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.69157576560974
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.93710070848465
+                }
+              ],
+              "href": "https://ap.rdcpix.com/a877d069582d2c098751c467fec19ac5l-m496968360s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "unknown",
+                  "probability": 0.99935537576675
+                }
+              ],
+              "href": "https://ap.rdcpix.com/a877d069582d2c098751c467fec19ac5l-m1316151535s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "exterior",
+                  "probability": 0.67055678367615
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.90633988380432
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.93217766284943
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.99909913539886
+                }
+              ],
+              "href": "https://ap.rdcpix.com/a877d069582d2c098751c467fec19ac5l-m1531612867s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "exterior",
+                  "probability": 0.98434966802597
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.98292475938797
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.8060616850853
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.98407435417175
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.47447198629379
+                }
+              ],
+              "href": "https://ap.rdcpix.com/a877d069582d2c098751c467fec19ac5l-m3708472373s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "exterior",
+                  "probability": 0.98523473739624
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.97329378128052
+                }
+              ],
+              "href": "https://ap.rdcpix.com/a877d069582d2c098751c467fec19ac5l-m1923960766s-w1024_h768.jpg"
+            }
+          ],
+          "flags": {
+            "is_new_construction": null,
+            "is_for_rent": null,
+            "is_subdivision": null,
+            "is_contingent": null,
+            "is_price_reduced": false,
+            "is_pending": null,
+            "is_foreclosure": null,
+            "is_plan": null,
+            "is_coming_soon": null,
+            "is_new_listing": false
+          },
+          "community": null,
+          "products": {
+            "brand_name": "essentials"
+          },
+          "virtual_tours": null,
+          "other_listings": {
+            "rdc": [
+              {
+                "listing_id": "2912827211",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "2933894617",
+                "listing_key": null,
+                "status": "sold",
+                "primary": null
+              },
+              {
+                "listing_id": "2933522519",
+                "listing_key": null,
+                "status": "sold",
+                "primary": null
+              },
+              {
+                "listing_id": "2727395724",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "616482341",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "615010401",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "573279657",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              }
+            ]
+          },
+          "listing_id": "2933894617",
+          "price_reduced_amount": 10000,
+          "location": {
+            "address": {
+              "postal_code": "48214",
+              "state": "Michigan",
+              "coordinate": {
+                "lon": -82.999226,
+                "lat": 42.356793
+              },
+              "city": "Detroit",
+              "state_code": "MI",
+              "line": "1743 Van Dyke St"
+            },
+            "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=1743%20Van%20Dyke%20St%2C%20Detroit%2C%20MI%2048214&size=640x480&source=outdoor&signature=QSfUseVl9_UT3DK-rVMfOXgrh88=",
+            "county": {
+              "fips_code": "26163",
+              "name": "Wayne"
+            }
+          },
+          "matterport": false
+        },
+        {
+          "primary_photo": {
+            "href": "https://ap.rdcpix.com/8328535c5823fadc5a679209734e605fl-m2252276094s-w1024_h768.jpg"
+          },
+          "last_update_date": "2021-12-16T11:46:06Z",
+          "source": {
+            "plan_id": null,
+            "agents": [
+              {
+                "office_name": null
+              },
+              {
+                "office_name": null
+              },
+              {
+                "office_name": null
+              }
+            ],
+            "spec_id": null,
+            "type": "mls"
+          },
+          "tags": [
+            "dishwasher",
+            "family_room",
+            "forced_air",
+            "hardwood_floors",
+            "community_outdoor_space",
+            "washer_dryer",
+            "basement",
+            "garage_1_or_more",
+            "two_or_more_stories",
+            "updated_kitchen",
+            "library",
+            "park"
+          ],
+          "permalink": "17164-Five-Points-St_Redford_MI_48240_M42470-33237",
+          "status": "sold",
+          "list_date": "2021-10-25T18:38:10Z",
+          "open_houses": null,
+          "description": {
+            "year_built": 1950,
+            "baths_3qtr": null,
+            "sold_date": "2021-12-16",
+            "sold_price": 117000,
+            "baths_full": 1,
+            "name": null,
+            "baths_half": null,
+            "lot_sqft": 6534,
+            "sqft": 1040,
+            "baths": 1,
+            "sub_type": null,
+            "baths_1qtr": null,
+            "garage": 1,
+            "stories": null,
+            "beds": 3,
+            "type": "single_family"
+          },
+          "branding": [
+            {
+              "name": "Coldwell Banker Weir Manuel - Ann Arbor",
+              "photo": null,
+              "type": "Office"
+            }
+          ],
+          "list_price": 134900,
+          "lead_attributes": {
+            "show_contact_an_agent": true
+          },
+          "property_id": "4247033237",
+          "photos": [
+            {
+              "tags": [
+                {
+                  "label": "exterior",
+                  "probability": 0.99934107065201
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.99138957262039
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.99957329034805
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.98063331842422
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.94812631607056
+                }
+              ],
+              "href": "https://ap.rdcpix.com/8328535c5823fadc5a679209734e605fl-m2252276094s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "exterior",
+                  "probability": 0.99984526634216
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.9988916516304
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.99991571903229
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.99064648151398
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.54266750812531
+                }
+              ],
+              "href": "https://ap.rdcpix.com/8328535c5823fadc5a679209734e605fl-m1962212423s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "exterior",
+                  "probability": 0.99297708272934
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.99848109483719
+                },
+                {
+                  "label": "exterior",
+                  "probability": 0.99959081411362
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.98073887825012
+                },
+                {
+                  "label": "other_unknowns",
+                  "probability": 0.83330285549164
+                }
+              ],
+              "href": "https://ap.rdcpix.com/8328535c5823fadc5a679209734e605fl-m3921755125s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "unknown",
+                  "probability": 0.99923205375671
+                }
+              ],
+              "href": "https://ap.rdcpix.com/8328535c5823fadc5a679209734e605fl-m3020322097s-w1024_h768.jpg"
+            },
+            {
+              "tags": [
+                {
+                  "label": "unknown",
+                  "probability": 0.99996733665466
+                }
+              ],
+              "href": "https://ap.rdcpix.com/8328535c5823fadc5a679209734e605fl-m2808505747s-w1024_h768.jpg"
+            }
+          ],
+          "flags": {
+            "is_new_construction": null,
+            "is_for_rent": null,
+            "is_subdivision": null,
+            "is_contingent": null,
+            "is_price_reduced": null,
+            "is_pending": null,
+            "is_foreclosure": null,
+            "is_plan": null,
+            "is_coming_soon": null,
+            "is_new_listing": false
+          },
+          "community": null,
+          "products": {
+            "brand_name": "essentials"
+          },
+          "virtual_tours": null,
+          "other_listings": {
+            "rdc": [
+              {
+                "listing_id": "2935948835",
+                "listing_key": null,
+                "status": "sold",
+                "primary": null
+              },
+              {
+                "listing_id": "588550877",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "508008113",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "502848353",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "501058425",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              }
+            ]
+          },
+          "listing_id": "2935948835",
+          "price_reduced_amount": null,
+          "location": {
+            "address": {
+              "postal_code": "48240",
+              "state": "Michigan",
+              "coordinate": {
+                "lon": -83.286265,
+                "lat": 42.415298
+              },
+              "city": "Detroit",
+              "state_code": "MI",
+              "line": "17164 N Five Points St"
+            },
+            "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=17164%20N%20Five%20Points%20St%2C%20Detroit%2C%20MI%2048240&size=640x480&source=outdoor&signature=bMMA32JZata3tyfb3DVBsjCbxfs=",
+            "county": {
+              "fips_code": "26163",
+              "name": "Wayne"
+            }
+          },
+          "matterport": false
+        },
+        {
+          "primary_photo": null,
+          "last_update_date": "2022-01-03",
+          "source": null,
+          "tags": null,
+          "permalink": "8311-Parkland_Redford_MI_48239_M46548-79901",
+          "status": "sold",
+          "list_date": null,
+          "open_houses": null,
+          "description": {
+            "year_built": null,
+            "baths_3qtr": null,
+            "sold_date": "2021-12-06",
+            "sold_price": 120000,
+            "baths_full": null,
+            "name": null,
+            "baths_half": null,
+            "lot_sqft": 5227,
+            "sqft": null,
+            "baths": 0,
+            "sub_type": null,
+            "baths_1qtr": null,
+            "garage": null,
+            "stories": null,
+            "beds": null,
+            "type": "single_family"
+          },
+          "branding": [
+            {
+              "name": null,
+              "photo": null,
+              "type": "Office"
+            }
+          ],
+          "list_price": null,
+          "lead_attributes": {
+            "show_contact_an_agent": true
+          },
+          "property_id": "4654879901",
+          "photos": null,
+          "flags": {
+            "is_new_construction": null,
+            "is_for_rent": null,
+            "is_subdivision": null,
+            "is_contingent": null,
+            "is_price_reduced": null,
+            "is_pending": null,
+            "is_foreclosure": null,
+            "is_plan": null,
+            "is_coming_soon": null,
+            "is_new_listing": null
+          },
+          "community": null,
+          "products": null,
+          "virtual_tours": null,
+          "other_listings": {
+            "rdc": [
+              {
+                "listing_id": "2935497593",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              }
+            ]
+          },
+          "listing_id": null,
+          "price_reduced_amount": null,
+          "location": {
+            "address": {
+              "postal_code": "48239",
+              "state": "Michigan",
+              "coordinate": {
+                "lon": -83.260994,
+                "lat": 42.35301
+              },
+              "city": "Redford",
+              "state_code": "MI",
+              "line": "8311 Parkland"
+            },
+            "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=8311%20Parkland%2C%20Redford%2C%20MI%2048239&size=640x480&source=outdoor&signature=ugwzof2gAUK6FYdiQ18n5amuPxk=",
+            "county": {
+              "fips_code": "26163",
+              "name": "Wayne"
+            }
+          },
+          "matterport": false
+        },
+        {
+          "primary_photo": null,
+          "last_update_date": "2022-01-03",
+          "source": null,
+          "tags": null,
+          "permalink": "224-E-Philadelphia-St_Detroit_MI_48202_M32211-24430",
+          "status": "sold",
+          "list_date": null,
+          "open_houses": null,
+          "description": {
+            "year_built": 1905,
+            "baths_3qtr": null,
+            "sold_date": "2021-12-06",
+            "sold_price": 115000,
+            "baths_full": 2,
+            "name": null,
+            "baths_half": null,
+            "lot_sqft": 6098,
+            "sqft": 6384,
+            "baths": 2,
+            "sub_type": null,
+            "baths_1qtr": null,
+            "garage": 1,
+            "stories": 2,
+            "beds": null,
+            "type": "multi_family"
+          },
+          "branding": [
+            {
+              "name": null,
+              "photo": null,
+              "type": "Office"
+            }
+          ],
+          "list_price": null,
+          "lead_attributes": {
+            "show_contact_an_agent": true
+          },
+          "property_id": "3221124430",
+          "photos": null,
+          "flags": {
+            "is_new_construction": null,
+            "is_for_rent": null,
+            "is_subdivision": null,
+            "is_contingent": null,
+            "is_price_reduced": null,
+            "is_pending": null,
+            "is_foreclosure": null,
+            "is_plan": null,
+            "is_coming_soon": null,
+            "is_new_listing": null
+          },
+          "community": null,
+          "products": null,
+          "virtual_tours": null,
+          "other_listings": {
+            "rdc": [
+              {
+                "listing_id": "2929697267",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "605236553",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "602124593",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "591574749",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              }
+            ]
+          },
+          "listing_id": null,
+          "price_reduced_amount": null,
+          "location": {
+            "address": {
+              "postal_code": "48202",
+              "state": "Michigan",
+              "coordinate": {
+                "lon": -83.07557,
+                "lat": 42.378783
+              },
+              "city": "Detroit",
+              "state_code": "MI",
+              "line": "224 E Philadelphia St"
+            },
+            "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=224%20E%20Philadelphia%20St%2C%20Detroit%2C%20MI%2048202&size=640x480&source=outdoor&signature=Qfrf3YMZKsTY7WNfkRvYpM-2EP0=",
+            "county": {
+              "fips_code": "26163",
+              "name": "Wayne"
+            }
+          },
+          "matterport": false
+        },
+        {
+          "primary_photo": null,
+          "last_update_date": "2022-01-03",
+          "source": null,
+          "tags": null,
+          "permalink": "19600-Hamburg-St_Detroit_MI_48205_M45779-66178",
+          "status": "sold",
+          "list_date": null,
+          "open_houses": null,
+          "description": {
+            "year_built": 1942,
+            "baths_3qtr": null,
+            "sold_date": "2021-12-06",
+            "sold_price": 80000,
+            "baths_full": 1,
+            "name": null,
+            "baths_half": null,
+            "lot_sqft": 4356,
+            "sqft": 770,
+            "baths": 1,
+            "sub_type": null,
+            "baths_1qtr": null,
+            "garage": 1,
+            "stories": 1,
+            "beds": null,
+            "type": "single_family"
+          },
+          "branding": [
+            {
+              "name": null,
+              "photo": null,
+              "type": "Office"
+            }
+          ],
+          "list_price": null,
+          "lead_attributes": {
+            "show_contact_an_agent": true
+          },
+          "property_id": "4577966178",
+          "photos": null,
+          "flags": {
+            "is_new_construction": null,
+            "is_for_rent": null,
+            "is_subdivision": null,
+            "is_contingent": null,
+            "is_price_reduced": null,
+            "is_pending": null,
+            "is_foreclosure": null,
+            "is_plan": null,
+            "is_coming_soon": null,
+            "is_new_listing": null
+          },
+          "community": null,
+          "products": null,
+          "virtual_tours": null,
+          "other_listings": {
+            "rdc": [
+              {
+                "listing_id": "2937169640",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "2936250164",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "518593977",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "502019593",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              }
+            ]
+          },
+          "listing_id": null,
+          "price_reduced_amount": null,
+          "location": {
+            "address": {
+              "postal_code": "48205",
+              "state": "Michigan",
+              "coordinate": {
+                "lon": -82.997106,
+                "lat": 42.439743
+              },
+              "city": "Detroit",
+              "state_code": "MI",
+              "line": "19600 Hamburg St"
+            },
+            "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=19600%20Hamburg%20St%2C%20Detroit%2C%20MI%2048205&size=640x480&source=outdoor&signature=PEzOrdY4clTeJjogqDnqQpOkZzY=",
+            "county": {
+              "fips_code": "26163",
+              "name": "Wayne"
+            }
+          },
+          "matterport": false
+        },
+        {
+          "primary_photo": null,
+          "last_update_date": "2022-01-03",
+          "source": null,
+          "tags": null,
+          "permalink": "16596-Rosemont-Ave_Detroit_MI_48219_M38094-19274",
+          "status": "sold",
+          "list_date": null,
+          "open_houses": null,
+          "description": {
+            "year_built": 1928,
+            "baths_3qtr": null,
+            "sold_date": "2021-12-03",
+            "sold_price": 232500,
+            "baths_full": 1,
+            "name": null,
+            "baths_half": 1,
+            "lot_sqft": 6970,
+            "sqft": 2800,
+            "baths": 2,
+            "sub_type": null,
+            "baths_1qtr": null,
+            "garage": 1,
+            "stories": 2,
+            "beds": null,
+            "type": "single_family"
+          },
+          "branding": [
+            {
+              "name": null,
+              "photo": null,
+              "type": "Office"
+            }
+          ],
+          "list_price": null,
+          "lead_attributes": {
+            "show_contact_an_agent": true
+          },
+          "property_id": "3809419274",
+          "photos": null,
+          "flags": {
+            "is_new_construction": null,
+            "is_for_rent": null,
+            "is_subdivision": null,
+            "is_contingent": null,
+            "is_price_reduced": null,
+            "is_pending": null,
+            "is_foreclosure": null,
+            "is_plan": null,
+            "is_coming_soon": null,
+            "is_new_listing": null
+          },
+          "community": null,
+          "products": null,
+          "virtual_tours": null,
+          "other_listings": {
+            "rdc": [
+              {
+                "listing_id": "2935754614",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "2933225233",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "2932552998",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "2415855414",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "575209513",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "549327281",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "509077349",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "510896861",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              }
+            ]
+          },
+          "listing_id": null,
+          "price_reduced_amount": null,
+          "location": {
+            "address": {
+              "postal_code": "48219",
+              "state": "Michigan",
+              "coordinate": {
+                "lon": -83.220855,
+                "lat": 42.411482
+              },
+              "city": "Detroit",
+              "state_code": "MI",
+              "line": "16596 Rosemont Ave"
+            },
+            "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=16596%20Rosemont%20Ave%2C%20Detroit%2C%20MI%2048219&size=640x480&source=outdoor&signature=eX_wOF9Y3W_BiIFHzQ306_5efSw=",
+            "county": {
+              "fips_code": "26163",
+              "name": "Wayne"
+            }
+          },
+          "matterport": false
+        },
+        {
+          "primary_photo": null,
+          "last_update_date": "2021-12-30",
+          "source": null,
+          "tags": null,
+          "permalink": "18065-Hamilton-Rd_Highland-Park_MI_48203_M41163-16232",
+          "status": "sold",
+          "list_date": null,
+          "open_houses": null,
+          "description": {
+            "year_built": 1925,
+            "baths_3qtr": null,
+            "sold_date": "2021-12-03",
+            "sold_price": 675000,
+            "baths_full": 4,
+            "name": null,
+            "baths_half": 2,
+            "lot_sqft": 24394,
+            "sqft": null,
+            "baths": 6,
+            "sub_type": null,
+            "baths_1qtr": null,
+            "garage": 3,
+            "stories": 2,
+            "beds": null,
+            "type": "single_family"
+          },
+          "branding": [
+            {
+              "name": null,
+              "photo": null,
+              "type": "Office"
+            }
+          ],
+          "list_price": null,
+          "lead_attributes": {
+            "show_contact_an_agent": true
+          },
+          "property_id": "4116316232",
+          "photos": null,
+          "flags": {
+            "is_new_construction": null,
+            "is_for_rent": null,
+            "is_subdivision": null,
+            "is_contingent": null,
+            "is_price_reduced": null,
+            "is_pending": null,
+            "is_foreclosure": null,
+            "is_plan": null,
+            "is_coming_soon": null,
+            "is_new_listing": null
+          },
+          "community": null,
+          "products": null,
+          "virtual_tours": null,
+          "other_listings": {
+            "rdc": [
+              {
+                "listing_id": "2927313736",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "2925325230",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              }
+            ]
+          },
+          "listing_id": null,
+          "price_reduced_amount": null,
+          "location": {
+            "address": {
+              "postal_code": "48203",
+              "state": "Michigan",
+              "coordinate": {
+                "lon": -83.125887,
+                "lat": 42.42926
+              },
+              "city": "Highland Park",
+              "state_code": "MI",
+              "line": "18065 Hamilton Rd"
+            },
+            "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=18065%20Hamilton%20Rd%2C%20Highland%20Park%2C%20MI%2048203&size=640x480&source=outdoor&signature=hNhDmtlENCsTjdn1jY1X8nPd6KI=",
+            "county": {
+              "fips_code": "26163",
+              "name": "Wayne"
+            }
+          },
+          "matterport": false
+        },
+        {
+          "primary_photo": null,
+          "last_update_date": "2022-01-03",
+          "source": null,
+          "tags": null,
+          "permalink": "15390-Auburn-St_Detroit_MI_48223_M39955-99922",
+          "status": "sold",
+          "list_date": null,
+          "open_houses": null,
+          "description": {
+            "year_built": 1938,
+            "baths_3qtr": null,
+            "sold_date": "2021-12-03",
+            "sold_price": 150000,
+            "baths_full": 1,
+            "name": null,
+            "baths_half": null,
+            "lot_sqft": 4792,
+            "sqft": 1200,
+            "baths": 1,
+            "sub_type": null,
+            "baths_1qtr": null,
+            "garage": 1,
+            "stories": 2,
+            "beds": null,
+            "type": "single_family"
+          },
+          "branding": [
+            {
+              "name": null,
+              "photo": null,
+              "type": "Office"
+            }
+          ],
+          "list_price": null,
+          "lead_attributes": {
+            "show_contact_an_agent": true
+          },
+          "property_id": "3995599922",
+          "photos": null,
+          "flags": {
+            "is_new_construction": null,
+            "is_for_rent": null,
+            "is_subdivision": null,
+            "is_contingent": null,
+            "is_price_reduced": null,
+            "is_pending": null,
+            "is_foreclosure": null,
+            "is_plan": null,
+            "is_coming_soon": null,
+            "is_new_listing": null
+          },
+          "community": null,
+          "products": null,
+          "virtual_tours": null,
+          "other_listings": {
+            "rdc": [
+              {
+                "listing_id": "2935043986",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "2924065773",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "2841731336",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "605354897",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "604337601",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "603699957",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "600690205",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "596003541",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "595983305",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "544863633",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "511855453",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              },
+              {
+                "listing_id": "511868141",
+                "listing_key": null,
+                "status": "off_market",
+                "primary": null
+              }
+            ]
+          },
+          "listing_id": null,
+          "price_reduced_amount": null,
+          "location": {
+            "address": {
+              "postal_code": "48223",
+              "state": "Michigan",
+              "coordinate": {
+                "lon": -83.234622,
+                "lat": 42.402101
+              },
+              "city": "Detroit",
+              "state_code": "MI",
+              "line": "15390 Auburn St"
+            },
+            "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=15390%20Auburn%20St%2C%20Detroit%2C%20MI%2048223&size=640x480&source=outdoor&signature=UTcY2-OQpFmOHTxOAU8uM2ELiuo=",
+            "county": {
+              "fips_code": "26163",
+              "name": "Wayne"
+            }
+          },
+          "matterport": false
+        }
+      ]
+    }
+  }
