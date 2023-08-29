@@ -32,8 +32,9 @@ if __name__ == "__main__":
     df = pd.json_normalize(filtered, record_path=['results'])
 
     # Create a new dataframe from only the interesting columns
-    df_filtered = df[['permalink','list_price','list_date','description.year_built','location.address.postal_code','location.county.name','location.address.city','location.address.state']]
+    df_filtered = df[['permalink','list_price','list_date','description.sold_date', 'location.address.postal_code','location.county.name','location.address.city','location.address.state', 'description.sqft', 'description.lot_sqft']]
     print(df_filtered)
 
     # need to write command to write df_filtered to a file (this will be the 300 jsons)
+    
     

@@ -11,7 +11,7 @@ filtered=json.load(inputfile)['data']
 df = pd.json_normalize(filtered, record_path=['results'])
 
 # Create a new dataframe from only the interesting columns
-df_filtered = df[['permalink','list_price','list_date','description.year_built','location.address.postal_code','location.county.name','location.address.city','location.address.state', "description.sold_date", "description.sqft", "description.lot_sqft"]]
+df_filtered = df[['permalink','list_price','list_date', 'description.sold_date', 'location.address.postal_code','location.address.city','location.address.state', 'description.sqft', 'description.lot_sqft']]
 print(df_filtered)
 
 # Add a write to json folder/file here
