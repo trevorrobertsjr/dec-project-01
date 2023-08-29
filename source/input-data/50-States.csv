@@ -1,0 +1,51 @@
+state_name,abbreviation,city_name,zip_1,zip_2,zip_3
+Alabama,AL,Huntsville,35649,35749,35758
+Alaska,AK,Anchorage,99501,99505,99509
+Arizona,AZ,Phoenix,85001,85005,85009
+Arkansas,AR,Little Rock,72002,72103,72201
+California,CA,Los Angeles,90001,90005,90009
+Colorado,CO,Denver,80014,80123,80204
+Connecticut,CT,Bridgeport,6601,6606,6615
+Delaware,DE,Wilmington,19801,19809,19886
+Florida,FL,Jacksonville,32034,32201,32205
+Georgia,GA,Atlanta,30033,30304,30308
+Hawaii,HI,Honolulu,96795,96804,96808
+Idaho,ID,Boise,83701,83705,83720
+Illinois,IL,Chicago,60007,60603,60131
+Indiana,IN,Indianapolis,46077,46133,46208
+Iowa,IA,Des Moines,50047,50303,50211
+Kansas,KS,Wichita,67052,67101,67202
+Kentucky,KY,Louisville,40018,40118,40207
+Louisiana,LA,New Orleans,70032,70118,70043
+Maine,ME,Portland,4019,4050,4108
+Maryland,MD,Baltimore,21201,21211,21217
+Massachusetts,MA,Boston,2108,2115,2123
+Michigan,MI,Detroit,48127,48203,48215
+Minnesota,MN,Minneapolis,55111,554101,55415
+Mississippi,MS,Jackson,39056,39202,39215
+Missouri,MO,Kansas City,64030,64079,64111
+Montana,MT,Billings,59101,59106,59112
+Nebraska,NE,Omaha,68007,68069,68111
+Nevada,NV,Las Vegas,88901,89102,89125
+New Hampshire,NH,Manchester,3101,3109,3431
+New Jersey,NJ,Newark,7101,7112,7193
+New Mexico,NM,Albuquerque,87101,87110,87119
+New York,NY,New York City,10001,10003,10016
+North Carolina,NC,Charlotte,28105,28204,28210
+North Dakota,ND,Fargo,58201,58205,58126
+Ohio,OH,Columbus,43304,43062,43110
+Oklahoma,OK,Oklahoma City,73008,73049,73101
+Oregon,OR,Portland,97035,97201,97214
+Pennsylvania,PA,Philadelphia,19019,19050,19101
+Rhode Island,RI,Providence,2860,2903,2940
+South Carolina,SC,Charleston,29401,29425,29492
+South Dakota,SD,Sioux Falls,57101,57110,57193
+Tennessee,TN,Nashville,37011,37080,37152
+Texas,TX,Houston,77001,77005,77016
+Utah,UT,Salt Lake City,84044,84102,84115
+Vermont,VT,Burlington,5401,5405,5408
+Virginia,VA,Virginia Beach,23450,23460,23465
+Washington,WA,Seattle,98101,98111,98117
+West Virginia,WV,Charleston,25301,25311,25327
+Wisconsin,WI,Milwaukee,53201,53210,53216
+Wyoming,WY,Cheyenne,82001,82003,82010
