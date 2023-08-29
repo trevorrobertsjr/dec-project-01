@@ -5,7 +5,7 @@ import json
 inputfile = open('extract-data.json')
 
 # Create a dictionary from JSON file with the home search results only
-filtered=json.load(inputfile)['data']
+filtered=json.load(inputfile)['data']['home_search']
 
 # Flatten nested JSON
 df = pd.json_normalize(filtered, record_path=['results'])
