@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import os
 import requests
 import pandas as pd
+import numpy as np
 
 
 def fetch_data_by_zipcode(zipcode, API_KEY, API_HOST):
@@ -10,7 +11,7 @@ def fetch_data_by_zipcode(zipcode, API_KEY, API_HOST):
     url = "https://us-real-estate.p.rapidapi.com/v2/sold-homes-by-zipcode"
 
     # Variable for zipcode
-    querystring = {"zipcode": zipcode, "offset": "0", "limit": "42"}
+    querystring = {"zipcode": zipcode, "offset": "0", "limit": "300"}
 
     headers = {
         "X-RapidAPI-Key": API_KEY,
@@ -78,17 +79,26 @@ def main():
     api_key = os.environ.get("X-RapidAPI-Key")
     api_host = os.environ.get("X-RapidAPI-Host")
 
-    zipcode_list_2 = ["35649", "35749"]
+    # Method 1
+    #This turns the column into a string and keeps the leading zeros.
+    zip_code_list = pd.read_csv("input-data/zipcodes.csv", dtype={'zipcodes': 'str'}, header=0)['zipcodes'].tolist()
 
-    # How would you loop through the list of zipcodes and call the fetch_data_by_zipcode function for each one?
-    # replace the for loop below with your answer.
+    # Method 2
+    # #This turns column into a string
+    # zip_code_list = pd.read_csv("input-data/zipcodes.csv", header=0)['zipcodes'].astype(str)
+    # # This puts zeros at the beginning of the zipcodes that are missing them.
+    # zip_code_list = zip_code_list.str.zfill(5)
 
-    #Also once you have the for loop working,
-    # edit the code, so it isn't like spaghetti code and add classes like the lesson in class.
 
-    for zipcode in zipcode_list_2:
+    # TODO
+    # EDIT THE CODE, SO IT ISN'T LIKE SPAGHETTI CODE AND ADD CLASSES/METHODS LIKE THE LESSONS IN CLASS.
+
+    for zipcode in zip_code_list:
         response = fetch_data_by_zipcode(zipcode, api_key, api_host)
         process_and_store_data(response, zipcode)
+
+    output_wo_nulls = pd.read_csv("output-data/csv/output.csv", header=0).dropna()
+    output_wo_nulls.to_csv("output-data/csv/output_wo_nulls.csv", header=True, index=False)
 
 
 if __name__ == "__main__":
