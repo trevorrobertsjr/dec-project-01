@@ -46,6 +46,9 @@ def process_and_store_data(response, zipcode):
                             'description.sqft',
                             'description.lot_sqft'
                             ]]
+            
+            # Replace periods in column names with underscore to fit Postgres column naming conventions
+            df_filtered.columns = df_filtered.columns.str.replace("[.]", "_", regex=True)
 
             # Write command to write df_filtered to a file (this will be the 300 jsons)
             df_filtered.to_json(r"output-data/json/" + zipcode + ".json")
