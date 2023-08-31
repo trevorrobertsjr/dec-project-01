@@ -15,7 +15,7 @@ def fetch_data_by_zipcode(zipcode, API_KEY, API_HOST):
 
     headers = {
         "X-RapidAPI-Key": API_KEY,
-        "X-RapidAPI-Host": API_HOST
+       "X-RapidAPI-Host": API_HOST
     }
 
     response = requests.get(url, headers=headers, params=querystring)
@@ -39,7 +39,7 @@ def process_and_store_data(response, zipcode):
                             'list_price',
                             'list_date',
                             'description.sold_date',
-                            'location.address.postal_code',
+                             location.address.postal_code',
                             'location.county.name',
                             'location.address.city',
                             'location.address.state',
