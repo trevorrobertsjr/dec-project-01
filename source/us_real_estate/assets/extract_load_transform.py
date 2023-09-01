@@ -44,6 +44,7 @@ def analytics_load(template_environment: Environment, source_postgresql_client: 
     
     Data is extracted using a source_postgresql_client, and loaded using a target_postgresql_client. 
     """
+    print(template_environment.list_templates())
     for asset in template_environment.list_templates():
         sql_extract_parser = SqlExtractParser(file_path=asset, environment=template_environment)
         database_table_extractor = DatabaseTableExtractor(

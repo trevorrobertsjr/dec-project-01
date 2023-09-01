@@ -1,11 +1,11 @@
-from us_real_estate.connectors.us_real_estate import UsRealEstateApiClient
-from us_real_estate.connectors.postgres import PostgreSqlClient
-from us_real_estate.assets.extract_load_transform import raw_load
- 
-
 from dotenv import load_dotenv
 import os
 import pandas as pd
+from jinja2 import Environment, FileSystemLoader
+from graphlib import TopologicalSorter
+from us_real_estate.connectors.us_real_estate import UsRealEstateApiClient
+from us_real_estate.connectors.postgres import PostgreSqlClient
+from us_real_estate.assets.extract_load_transform import raw_load, analytics_load, transform, SqlTransform
 
 def main():
     load_dotenv()
@@ -23,28 +23,38 @@ def main():
     ANALYTICS_USERNAME=os.environ.get("ANALYTICS_USERNAME")
     ANALYTICS_PASSWORD=os.environ.get("ANALYTICS_PASSWORD")
     ANALYTICS_PORT=os.environ.get("ANALYTICS_PORT")
+    try:
+        # Connect to the US Real Estate API
+        us_real_estate_client = UsRealEstateApiClient(api_key=X_RapidAPI_Key, api_host=X_RapidAPI_Host)
+        # Connect to raw data zone database
+        raw_database_client = PostgreSqlClient(
+            server_name=RAW_SERVER_NAME,
+            database_name=RAW_DATABASE_NAME,
+            username=RAW_USERNAME,
+            password=RAW_PASSWORD,
+            port=RAW_PORT
+        )
+        # Connect to analytics data zone database
+        analytics_database_client = PostgreSqlClient(
+            server_name=ANALYTICS_SERVER_NAME,
+            database_name=ANALYTICS_DATABASE_NAME,
+            username=ANALYTICS_USERNAME,
+            password=ANALYTICS_PASSWORD,
+            port=ANALYTICS_PORT
+        )
 
-    # Connect to the US Real Estate API
-    us_real_estate_client = UsRealEstateApiClient(api_key=X_RapidAPI_Key, api_host=X_RapidAPI_Host)
-    # Connect to raw data zone database
-    raw_database_client = PostgreSqlClient(
-        server_name=RAW_SERVER_NAME,
-        database_name=RAW_DATABASE_NAME,
-        username=RAW_USERNAME,
-        password=RAW_PASSWORD,
-        port=RAW_PORT
-    )
-    # Connect to analytics data zone database
-    analytics_database_client = PostgreSqlClient(
-        server_name=ANALYTICS_SERVER_NAME,
-        database_name=ANALYTICS_DATABASE_NAME,
-        username=ANALYTICS_USERNAME,
-        password=ANALYTICS_PASSWORD,
-        port=ANALYTICS_PORT
-    )
+        # Create raw database with API data if it does not exist.
+        raw_load(us_real_estate_client, raw_database_client)
 
-    # Create raw database with API data if it does not exist.
-    raw_load(us_real_estate_client, raw_database_client)
+        extract_template_environment = Environment(loader=FileSystemLoader("us_real_estate/assets/sql/extract"))
+        # pipeline_logging.logger.info("Perform extract and load")
+        analytics_load(
+            template_environment=extract_template_environment, 
+            source_postgresql_client=raw_database_client, 
+            target_postgresql_client=analytics_database_client
+        )
+    except BaseException as e:
+        print(e)
 
 if __name__ == "__main__":
     main()    
