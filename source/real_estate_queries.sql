@@ -1,6 +1,6 @@
 -- Description: SQL queries for the project
 -- Initialize no nulls table for queries. Also changed location_address_postal_code to a string to account for leading zeros.
-CREATE TABLE listings_nonull AS
+CREATE TABLE us_real_estate_listings AS
 SELECT
     permalink,
     list_price,
@@ -32,7 +32,7 @@ AND description_lot_sqft IS NOT NULL;
 CREATE TABLE national_average AS
 WITH NationalAverage AS (
     SELECT AVG(CAST(list_price AS numeric)) as national_avg_price
-    FROM listings_nonull
+    FROM us_real_estate_listings
 )
 
 SELECT
@@ -44,7 +44,7 @@ SELECT
         WHEN AVG(CAST(list_price AS numeric)) > (SELECT national_avg_price FROM NationalAverage) THEN 'Above National Average'
         ELSE 'Below National Average'
     END AS comparison
-FROM listings_nonull
+FROM us_real_estate_listings
 GROUP BY location_address_city, location_address_state, location_county_name
 ORDER BY location_address_state, location_address_city, location_county_name;
 
@@ -55,7 +55,7 @@ WITH StateAverage AS (
     SELECT
         location_address_state,
         ROUND(AVG(CAST(list_price AS numeric)),2) AS avg_state_price
-    FROM listings_nonull
+    FROM us_real_estate_listings
     GROUP BY location_address_state
 ),
 
@@ -64,7 +64,7 @@ ZipCodeAverage AS (
         location_address_postal_code,
         location_address_state,
         ROUND(AVG(CAST(list_price AS numeric)),2) AS avg_zip_price
-    FROM listings_nonull
+    FROM us_real_estate_listings
     GROUP BY location_address_postal_code, location_address_state
 )
 
@@ -94,7 +94,7 @@ CREATE TABLE sold_homes_per_zip AS
 SELECT
     location_address_postal_code AS zip_code,
     COUNT(*) AS home_count
-FROM listings_nonull
+FROM us_real_estate_listings
 GROUP BY location_address_postal_code
 ORDER BY home_count DESC, zip_code;
 
@@ -110,7 +110,7 @@ SELECT
     location_address_postal_code AS zip_code,
     location_address_city AS city,
     location_address_state AS state
-FROM listings_nonull
+FROM us_real_estate_listings
 ORDER BY list_price DESC
 LIMIT 10;
 
@@ -125,7 +125,7 @@ WITH RankedHomes AS (
         location_address_city AS city,
         location_address_state AS state,
         ROW_NUMBER() OVER(PARTITION BY location_address_postal_code ORDER BY list_price DESC) AS rn
-    FROM listings_nonull
+    FROM us_real_estate_listings
 )
 
 SELECT
@@ -143,7 +143,7 @@ limit 10;
 -- 3. How long it took to sell the biggest homes per zip code
 -- ***Note: I had to include the CASE statement to account for the fact that some homes were sold before they were listed.
 -- I think this is a data input issue. I am also not sure if this is the best way to handle this issue.***
-CREATE TABLE AS biggest_homes_listing_time AS
+CREATE TABLE biggest_homes_listing_time AS
 WITH BiggestHomes AS (
     SELECT
         permalink,
@@ -155,7 +155,7 @@ WITH BiggestHomes AS (
         list_date,
         description_sold_date,
         ROW_NUMBER() OVER(PARTITION BY location_address_postal_code ORDER BY description_sqft DESC, list_price DESC) AS rn
-    FROM listings_nonull
+    FROM us_real_estate_listings
 )
 
 SELECT
@@ -187,7 +187,7 @@ SELECT
     list_date,
     description_sold_date,
     ABS(EXTRACT(DAY FROM (description_sold_date - list_date))) AS days_on_market
-FROM listings_nonull
+FROM us_real_estate_listings
 ORDER BY description_sqft DESC, days_on_market DESC;
 
 -- Max's questions
@@ -201,7 +201,7 @@ SELECT
     location_address_city AS city,
     location_address_state AS state,
     location_address_postal_code AS zip_code
-FROM listings_nonull
+FROM us_real_estate_listings
 ORDER BY list_price DESC, description_sold_date DESC;
 
 -- Max's questions
