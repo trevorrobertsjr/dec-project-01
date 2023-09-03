@@ -1,6 +1,6 @@
 {% set config = {
     "extract_type": "incremental", 
-    "incremental_column": "description_sold_date",
+    "incremental_column": "date_collected",
     "source_table_name": "us_real_estate_listings"
 } %}
 
@@ -14,7 +14,8 @@ select
     location_address_city,
     location_address_state,
     description_sqft,
-    description_lot_sqft
+    description_lot_sqft,
+    date_collected
 from 
     {{ config["source_table_name"] }}
 

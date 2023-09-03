@@ -65,5 +65,7 @@ class UsRealEstateApiClient:
             df_filtered['list_price'] = pd.to_numeric(df_filtered['list_price'])
             df_filtered['description_sqft'] = pd.to_numeric(df_filtered['description_sqft'])
             df_filtered['description_lot_sqft'] = pd.to_numeric(df_filtered['description_lot_sqft'])
+            # Insert column for data collection date
+            df_filtered['date_collected'] = pd.Timestamp.today()
             # return rows that do not contain nulls
             return df_filtered.dropna()

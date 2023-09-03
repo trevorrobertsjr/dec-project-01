@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, Table, MetaData, Column, inspect
 from sqlalchemy.engine import URL
 from sqlalchemy.dialects import postgresql
+from datetime import datetime, timedelta
 
 
 class PostgreSqlClient:
@@ -30,6 +31,11 @@ class PostgreSqlClient:
         )
 
         self.engine = create_engine(connection_url)
+    
+    def is_raw_data_current(self) -> bool:
+        last_collection_date_query = self.engine.execute("SELECT MAX(date_collected) from us_real_estate_listings")
+        last_collection_date=last_collection_date_query.fetchone()
+        return datetime.now() < last_collection_date[0]+timedelta(days=30)
     
     def write_to_table(self, data: list[dict], table: Table, metadata: MetaData) -> None:
         key_columns = [pk_column.name for pk_column in table.primary_key.columns.values()]

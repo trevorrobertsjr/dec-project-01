@@ -10,8 +10,8 @@ def transform():
     pass
 
 def raw_load(us_real_estate_client, raw_database_client):
-    if raw_database_client.table_exists("us_real_estate_listings"):
-        print("Raw database initlaized")
+    if raw_database_client.table_exists("us_real_estate_listings") and raw_database_client.is_raw_data_current():
+        print("Raw database is current. Next source data update happens at the monthly interval.")
     else:
         # SQL Alchemy for Raw database creation.
         metadata = MetaData()
@@ -26,7 +26,8 @@ def raw_load(us_real_estate_client, raw_database_client):
             Column('location_address_city', String),
             Column('location_address_state', String),
             Column('description_sqft', Float),
-            Column('description_lot_sqft', Float)
+            Column('description_lot_sqft', Float),
+            Column('date_collected', DateTime, nullable=False)
         )
         # Retrieve list of zipcodes.
         zip_code_list = pd.read_csv("us_real_estate/data/zipcodes-test.csv", dtype={'zipcodes': 'str'}, header=0)['zipcodes'].tolist()
@@ -44,7 +45,6 @@ def analytics_load(template_environment: Environment, source_postgresql_client: 
     
     Data is extracted using a source_postgresql_client, and loaded using a target_postgresql_client. 
     """
-    print(template_environment.list_templates())
     for asset in template_environment.list_templates():
         sql_extract_parser = SqlExtractParser(file_path=asset, environment=template_environment)
         database_table_extractor = DatabaseTableExtractor(
