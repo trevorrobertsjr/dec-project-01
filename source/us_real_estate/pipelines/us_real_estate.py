@@ -6,11 +6,32 @@ from graphlib import TopologicalSorter
 from us_real_estate.connectors.us_real_estate import UsRealEstateApiClient
 from us_real_estate.connectors.postgres import PostgreSqlClient
 from us_real_estate.assets.extract_load_transform import raw_load, analytics_load, transform, SqlTransform
+from us_real_estate.assets.pipeline_logging import PipelineLogging
+from us_real_estate.assets.metadata_logging import MetaDataLogging, MetaDataLoggingStatus
+
 
 def main():
     load_dotenv()
+    # retrieve logging database credentials
+    LOGGING_SERVER_NAME = os.environ.get("LOGGING_SERVER_NAME")
+    LOGGING_DATABASE_NAME = os.environ.get("LOGGING_DATABASE_NAME")
+    LOGGING_USERNAME = os.environ.get("LOGGING_USERNAME")
+    LOGGING_PASSWORD = os.environ.get("LOGGING_PASSWORD")
+    LOGGING_PORT = os.environ.get("LOGGING_PORT")
 
-    # retrieve credentials from environment variables
+    # connect to logging database
+    postgresql_logging_client = PostgreSqlClient(
+        server_name=LOGGING_SERVER_NAME,
+        database_name=LOGGING_DATABASE_NAME,
+        username=LOGGING_USERNAME,
+        password=LOGGING_PASSWORD,
+        port=LOGGING_PORT
+    )
+
+    metadata_logging = MetaDataLogging(pipeline_name="us_real_estate", postgresql_client=postgresql_logging_client)
+    pipeline_logging = PipelineLogging(pipeline_name="us_real_estate", log_folder_path="us_real_estate/logs")
+
+    # retrieve api, raw database, and analytics database credentials from environment variables
     X_RapidAPI_Key=os.environ.get("X-RapidAPI-Key")
     X_RapidAPI_Host=os.environ.get("X-RapidAPI-Host")
     RAW_DATABASE_NAME=os.environ.get("RAW_DATABASE_NAME")
@@ -44,10 +65,14 @@ def main():
         )
 
         # Create raw database with API data if it does not exist.
-        raw_load(us_real_estate_client, raw_database_client)
+        raw_load_status = raw_load(us_real_estate_client, raw_database_client)
+        if raw_load_status:
+            pipeline_logging.logger.info(raw_load_status)
+        else:
+            pipeline_logging.logger.info("Perform raw database build and load")
 
         analytics_template_environment = Environment(loader=FileSystemLoader("us_real_estate/assets/sql/extract"))
-        # pipeline_logging.logger.info("Perform analytics database build and load")
+        pipeline_logging.logger.info("Perform analytics database build and load")
         analytics_load(
             template_environment=analytics_template_environment, 
             source_postgresql_client=raw_database_client, 
@@ -74,30 +99,16 @@ def main():
         dag.add(sold_homes_per_zip)
         dag.add(when_most_expensive_homes_sold)
         # run transform 
-        # pipeline_logging.logger.info("Perform transform")
+        pipeline_logging.logger.info("Perform transform")
         transform(dag=dag)
-        # pipeline_logging.logger.info("Pipeline complete")
-        # metadata_logging.log(status=MetaDataLoggingStatus.RUN_SUCCESS, logs=pipeline_logging.get_logs()) 
-        # pipeline_logging.logger.handlers.clear()
-
-        ### DEBUG DAG
-        # biggest_homes_listing_time.create_analytics_table()
-        # longest_days_home_size.create_analytics_table()
-        # most_expensive_top_10_per_zip.create_analytics_table()
-        # national_average.create_analytics_table()
-        # prospective_buyer.create_analytics_table()
-        # sold_homes_per_zip.create_analytics_table()
-        # when_most_expensive_homes_sold.create_analytics_table()
-        # dag.add(biggest_homes_listing_time)
-        # dag.add(longest_days_home_size, biggest_homes_listing_time)
-        # dag.add(most_expensive_top_10_per_zip, longest_days_home_size)
-        # dag.add(national_average, most_expensive_top_10_per_zip)
-        # dag.add(prospective_buyer, national_average)
-        # dag.add(sold_homes_per_zip, prospective_buyer)
-        # dag.add(when_most_expensive_homes_sold, sold_homes_per_zip)
+        pipeline_logging.logger.info("Pipeline complete")
+        metadata_logging.log(status=MetaDataLoggingStatus.RUN_SUCCESS, logs=pipeline_logging.get_logs()) 
+        pipeline_logging.logger.handlers.clear()
 
     except BaseException as e:
-        print(e)
+        pipeline_logging.logger.error(f"Pipeline failed with exception {e}")
+        metadata_logging.log(status=MetaDataLoggingStatus.RUN_FAILURE, logs=pipeline_logging.get_logs()) 
+        pipeline_logging.logger.handlers.clear()
 
 if __name__ == "__main__":
     main()    

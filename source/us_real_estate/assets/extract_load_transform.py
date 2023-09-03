@@ -11,8 +11,8 @@ def transform():
 
 def raw_load(us_real_estate_client, raw_database_client):
     if raw_database_client.table_exists("us_real_estate_listings") and raw_database_client.is_raw_data_current():
-        # print("Raw database is current. Next source data update happens at the monthly interval.")
-        pass
+        return "Raw database is current. Next source data update happens at the monthly interval."
+        # pass
     else:
         # SQL Alchemy for Raw database creation.
         metadata = MetaData()
@@ -31,7 +31,7 @@ def raw_load(us_real_estate_client, raw_database_client):
             Column('date_collected', DateTime, nullable=False)
         )
         # Retrieve list of zipcodes.
-        zip_code_list = pd.read_csv("us_real_estate/data/zipcodes-test.csv", dtype={'zipcodes': 'str'}, header=0)['zipcodes'].tolist()
+        zip_code_list = pd.read_csv("us_real_estate/data/zipcodes.csv", dtype={'zipcodes': 'str'}, header=0)['zipcodes'].tolist()
 
         for zipcode in zip_code_list:
             # Create/Upsert each zipcode's data to the us_real_estate_listings table from the API
