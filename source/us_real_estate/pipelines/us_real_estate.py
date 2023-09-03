@@ -46,13 +46,56 @@ def main():
         # Create raw database with API data if it does not exist.
         raw_load(us_real_estate_client, raw_database_client)
 
-        extract_template_environment = Environment(loader=FileSystemLoader("us_real_estate/assets/sql/extract"))
-        # pipeline_logging.logger.info("Perform extract and load")
+        analytics_template_environment = Environment(loader=FileSystemLoader("us_real_estate/assets/sql/extract"))
+        # pipeline_logging.logger.info("Perform analytics database build and load")
         analytics_load(
-            template_environment=extract_template_environment, 
+            template_environment=analytics_template_environment, 
             source_postgresql_client=raw_database_client, 
             target_postgresql_client=analytics_database_client
         )
+        transform_template_environment = Environment(loader=FileSystemLoader("us_real_estate/assets/sql/transform"))
+        
+        # create nodes
+        biggest_homes_listing_time = SqlTransform(table_name="biggest_homes_listing_time", postgresql_client=analytics_database_client, environment=transform_template_environment)
+        longest_days_home_size = SqlTransform(table_name="longest_days_home_size", postgresql_client=analytics_database_client, environment=transform_template_environment)
+        most_expensive_top_10_per_zip = SqlTransform(table_name="most_expensive_top_10_per_zip", postgresql_client=analytics_database_client, environment=transform_template_environment)
+        national_average = SqlTransform(table_name="national_average", postgresql_client=analytics_database_client, environment=transform_template_environment)
+        prospective_buyer = SqlTransform(table_name="prospective_buyer", postgresql_client=analytics_database_client, environment=transform_template_environment)
+        sold_homes_per_zip = SqlTransform(table_name="sold_homes_per_zip", postgresql_client=analytics_database_client, environment=transform_template_environment)
+        when_most_expensive_homes_sold = SqlTransform(table_name="when_most_expensive_homes_sold", postgresql_client=analytics_database_client, environment=transform_template_environment)
+        
+        # create DAG 
+        dag = TopologicalSorter()
+        dag.add(biggest_homes_listing_time)
+        dag.add(longest_days_home_size)
+        dag.add(most_expensive_top_10_per_zip)
+        dag.add(national_average)
+        dag.add(prospective_buyer)
+        dag.add(sold_homes_per_zip)
+        dag.add(when_most_expensive_homes_sold)
+        # run transform 
+        # pipeline_logging.logger.info("Perform transform")
+        transform(dag=dag)
+        # pipeline_logging.logger.info("Pipeline complete")
+        # metadata_logging.log(status=MetaDataLoggingStatus.RUN_SUCCESS, logs=pipeline_logging.get_logs()) 
+        # pipeline_logging.logger.handlers.clear()
+
+        ### DEBUG DAG
+        # biggest_homes_listing_time.create_analytics_table()
+        # longest_days_home_size.create_analytics_table()
+        # most_expensive_top_10_per_zip.create_analytics_table()
+        # national_average.create_analytics_table()
+        # prospective_buyer.create_analytics_table()
+        # sold_homes_per_zip.create_analytics_table()
+        # when_most_expensive_homes_sold.create_analytics_table()
+        # dag.add(biggest_homes_listing_time)
+        # dag.add(longest_days_home_size, biggest_homes_listing_time)
+        # dag.add(most_expensive_top_10_per_zip, longest_days_home_size)
+        # dag.add(national_average, most_expensive_top_10_per_zip)
+        # dag.add(prospective_buyer, national_average)
+        # dag.add(sold_homes_per_zip, prospective_buyer)
+        # dag.add(when_most_expensive_homes_sold, sold_homes_per_zip)
+
     except BaseException as e:
         print(e)
 

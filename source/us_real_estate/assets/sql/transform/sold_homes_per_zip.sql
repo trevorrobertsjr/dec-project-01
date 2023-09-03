@@ -1,4 +1,4 @@
--- 1. How many sold homes are in each zip code?
+DROP TABLE IF EXISTS sold_homes_per_zip;
 CREATE TABLE sold_homes_per_zip AS
 SELECT
     location_address_postal_code AS zip_code,

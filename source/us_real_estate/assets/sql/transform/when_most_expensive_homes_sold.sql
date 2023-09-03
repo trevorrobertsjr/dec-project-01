@@ -1,5 +1,4 @@
--- 5. When the most expensive homes were sold and where
-
+DROP TABLE IF EXISTS when_most_expensive_homes_sold;
 CREATE TABLE when_most_expensive_homes_sold AS
 SELECT
     permalink,

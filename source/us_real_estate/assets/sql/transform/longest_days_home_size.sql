@@ -1,5 +1,4 @@
--- 4. Longest days on the market by home size
--- ***Note: I had to include the ABS() statement to account for the fact that some homes were sold before they were listed (times were negative).
+DROP TABLE IF EXISTS longest_days_home_size;
 CREATE TABLE longest_days_home_size AS
 SELECT
     permalink,

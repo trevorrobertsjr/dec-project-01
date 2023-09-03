@@ -1,6 +1,4 @@
--- 3. How long it took to sell the biggest homes per zip code
--- ***Note: I had to include the CASE statement to account for the fact that some homes were sold before they were listed.
--- I think this is a data input issue. I am also not sure if this is the best way to handle this issue.***
+DROP TABLE IF EXISTS biggest_homes_listing_time;
 CREATE TABLE biggest_homes_listing_time AS
 WITH BiggestHomes AS (
     SELECT

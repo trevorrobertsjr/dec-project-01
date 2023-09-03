@@ -1,4 +1,4 @@
--- The top 10 most expensive homes per zip code
+DROP TABLE IF EXISTS most_expensive_top_10_per_zip;
 CREATE TABLE most_expensive_top_10_per_zip AS
 WITH RankedHomes AS (
     SELECT

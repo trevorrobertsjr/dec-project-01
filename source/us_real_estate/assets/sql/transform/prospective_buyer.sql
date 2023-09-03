@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS prospective_buyer;
 CREATE TABLE prospective_buyer AS
 WITH StateAverage AS (
     SELECT

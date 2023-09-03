@@ -2,7 +2,7 @@ import pandas as pd
 from jinja2 import Environment
 from graphlib import TopologicalSorter
 from us_real_estate.assets.database_extractor import SqlExtractParser, DatabaseTableExtractor
-from us_real_estate.connectors.us_real_estate import UsRealEstateApiClient
+# from us_real_estate.connectors.us_real_estate import UsRealEstateApiClient
 from us_real_estate.connectors.postgres import PostgreSqlClient
 from sqlalchemy import Table, Column, Integer, String, MetaData, Float, DateTime
 
@@ -11,7 +11,8 @@ def transform():
 
 def raw_load(us_real_estate_client, raw_database_client):
     if raw_database_client.table_exists("us_real_estate_listings") and raw_database_client.is_raw_data_current():
-        print("Raw database is current. Next source data update happens at the monthly interval.")
+        # print("Raw database is current. Next source data update happens at the monthly interval.")
+        pass
     else:
         # SQL Alchemy for Raw database creation.
         metadata = MetaData()
@@ -76,7 +77,7 @@ class SqlTransform:
         self.postgresql_client.execute_sql(exec_sql)
 
     def create_analytics_table(self) -> None:
-        pass
+        self.postgresql_client.execute_sql(self.template.render())
 
 def transform(dag: TopologicalSorter):
     """
@@ -84,4 +85,4 @@ def transform(dag: TopologicalSorter):
     """
     dag_rendered = tuple(dag.static_order())
     for node in dag_rendered: 
-        node.create_table_as()
+        node.create_analytics_table()
