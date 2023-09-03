@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import os
 
 class UsRealEstateApiClient:
 
@@ -57,6 +58,8 @@ class UsRealEstateApiClient:
             
             # Replace periods in column names with underscore to fit Postgres column naming conventions
             df_filtered.columns = df_filtered.columns.str.replace("[.]", "_", regex=True)
+            # Remove rows with any empty values
+            df_filtered.dropna(inplace=True)
             # Change list_date and description_sold_date to timestamp data types
             df_filtered['list_date'] = pd.to_datetime(df_filtered['list_date'])
             df_filtered['description_sold_date'] = pd.to_datetime(df_filtered['description_sold_date'])
@@ -67,5 +70,14 @@ class UsRealEstateApiClient:
             df_filtered['description_lot_sqft'] = pd.to_numeric(df_filtered['description_lot_sqft'])
             # Insert column for data collection date
             df_filtered['date_collected'] = pd.Timestamp.today()
-            # return rows that do not contain nulls
-            return df_filtered.dropna()
+
+            # # BEGIN Debug problematic source data only. Comment out before prod
+            # # Check if the CSV file already exists
+            # file_exists = os.path.isfile("us_real_estate/logs/debug.csv")
+            # if file_exists:
+            #     df_filtered.to_csv("us_real_estate/logs/debug.csv", mode='a', header=False, index=False)
+            # else:
+            #     df_filtered.to_csv("us_real_estate/logs/debug.csv", mode='w', header=True, index=False)
+            # print(zipcode)
+            # # END Debug only. Comment out before prod
+            return df_filtered
