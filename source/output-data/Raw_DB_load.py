@@ -38,4 +38,4 @@ def write_to_RawDB(raw_db_engine: Engine, us_real_estate: pd.DataFrame): # infor
     #     set_={c.key: c for c in insert_statement.excluded if c.key not in key_columns})
     
 # raw_db_engine.execute(upsert_statement)
-# Upsert statement to test when data is ready
+# Upsert statement to test when d
