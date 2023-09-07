@@ -1,6 +1,6 @@
 # dec-project-01
 
-# **Table of Content**
+# **Table of Contents**
 
 * Introduction
 * Data Sources
@@ -11,7 +11,7 @@
 
 # Introduction
 
-Our goal in this project is to identify trends and answer questions regarding real estate in the United States and provide useful information to both house buyers and sellers wich will help them in the decison making process.
+Our goal in this project is to identify trends and answer questions regarding real estate in the United States and provide useful information to both home buyers and sellers which will help them in the decision-making process.
 
 # Data Source
 
@@ -21,17 +21,20 @@ We are going to source data from the US real estate public API.
 | ------------------ | ----------- | ------------------------------------------------------------------------------------------------------- |
 | US Real Estate API | API         | [https://rapidapi.com/datascraper/api/us-real-estate](https://rapidapi.com/datascraper/api/us-real-estate) |
 
+
 # Analytical Questions
 
-* what is the biggest home listing time
-* wich house by size last longer on the market
-* what are the 10 cheapest/most expensive homes across all zip codes
-* When and where were the most expensive homes sold
-* What are the location of the most expensive houses
+* How long did it take to sell the biggest homes per zip code?
+* Longest days on the market by home size?
+* Which cities, states, and regions are seeing below/above national average home prices
+* What is the average home price in a state and how do home prices compare in the zip code that a prospective buyer is searching for homes in?
+* How many sold homes are in each zip code?
+* When the most expensive homes were sold and where?
+
 
 # Tools
 
-We are going to use the the below tool for this project
+We are going to use the below tool for this project
 
 
 | Tool              | Usage                                        |
@@ -44,8 +47,3 @@ We are going to use the the below tool for this project
 # Architecture
 
 ![1694036021835](image/README/1694036021835.png)
-
-# Challenges
-
-* Limitation of the number of API call
-* Cost of calling an API.
